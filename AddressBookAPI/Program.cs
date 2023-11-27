@@ -1,3 +1,4 @@
+using AddressBookAPI.Mappers;
 using AddressBookAPI.Services;
 
 namespace AddressBookAPI
@@ -12,11 +13,17 @@ namespace AddressBookAPI
             builder.Services.AddTransient<IContactService, ContactService>();
             //builder.Services.AddScoped<ContactService>();
             //builder.Services.AddSingleton<ContactService>();
+            builder.Services.AddScoped<MyMapper>();
+
+            // AutoMapper
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+
 
             var app = builder.Build();
 

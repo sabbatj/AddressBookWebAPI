@@ -39,4 +39,4 @@ To get started with the Address Book Web API, follow these steps:
 
 ## Future Enhancements
 
-- Integration with Angular frontend for a complete web application experience.
+- Integration with frontend for a complete web application experience.
